@@ -2,7 +2,8 @@ import psutil
 import os
 from time import sleep
 
-command_str = ""
+command_str = None
+last_command_str = None
 
 battery = psutil.sensors_battery()
 
@@ -33,6 +34,10 @@ while True:
     if not is_plugged and percent >= 90:
         command_str = "performance"
 
-    sleep(10)
 
-    os.system(f"powerprofilesctl set {command_str}")
+    if command_str != last_command_str:
+        print(f"Setting mode to {command_str}")
+        os.system(f"powerprofilesctl set {command_str}")
+        last_command_str = command_str
+
+    sleep(10)
