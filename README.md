@@ -200,6 +200,10 @@ To modify battery thresholds or power profile logic, edit the `determine_power_p
 - Multiple user profile support
 - Integration with external hardware controls
 
+## IMPORTANT
+
+- Just found out game mode doesn't work when you run it as service, I will fix it when i have time.
+
 ## License
 
 MIT License - Feel free to modify and distribute.
