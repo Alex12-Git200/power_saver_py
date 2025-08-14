@@ -82,6 +82,8 @@ minecraft
 cs2
 dota2
 # Add your games here
+# NOTE: Add you game name the same as the id, so for e.g. if you are running supertux, run this: pgrep -a -f supertux (while running the game)
+# and the output is the correct name to put on games.txt
 ```
 
 ### 3. Set Up as a System Service
